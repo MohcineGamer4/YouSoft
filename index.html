@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouSoft</title>
+    <style>
+        /* 4chan-inspired color scheme */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E6E6E6;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            line-height: 1.4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #F0E0D6;
+            border: 1px solid #D9BFB7;
+            flex: 1;
+            width: 100%;
+        }
+        
+        header {
+            background-color: #EEF2FF;
+            padding: 10px 20px;
+            border-bottom: 1px solid #B7C5D9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            width: 216px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .donate-btn {
+            background-color: #FFCC00;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .donate-btn:hover {
+            background-color: #E6B800;
+        }
+        
+        .sidebar {
+            width: 200px;
+            background-color: #D9BFB7;
+            padding: 20px;
+            border-right: 1px solid #B7C5D9;
+        }
+        
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .project-list li {
+            margin-bottom: 10px;
+        }
+        
+        .project-list a {
+            display: block;
+            padding: 8px;
+            background-color: #F0E0D6;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #D9BFB7;
+        }
+        
+        .project-list a:hover {
+            background-color: #E6E6E6;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .project-logo-container {
+            width: 216px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .project-logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .project-title {
+            color: #800000;
+            border-bottom: 1px solid #B7C5D9;
+            padding-bottom: 5px;
+        }
+        
+        .project-description {
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: #EEF2FF;
+            padding: 10px 20px;
+            border-top: 1px solid #B7C5D9;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo.png" alt="YouSoft Logo">
+                </a>
+            </div>
+        </div>
+        <a href="https://www.paypal.me/MohcineElhala" class="donate-btn" target="_blank">Donate via PayPal</a>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Projects</h3>
+            <ul class="project-list">
+                <li><a href="#youblog">YouBlog</a></li>
+                <li><a href="#youchan">YouChan</a></li>
+                <!-- Add more projects here as needed -->
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <!-- Default content when no project is selected -->
+            <div id="default-content">
+                <h2>Welcome to YouSoft</h2>
+                <p>Select a project from the sidebar to view its details.</p>
+            </div>
+            
+            <!-- YouBlog Project Page (hidden by default) -->
+            <div id="youblog" class="project-page" style="display: none;">
+                <div class="project-logo-container">
+                    <a href="http://youblog.free.nf" target="_blank">
+                        <img src="youblog-logo.png" alt="YouBlog Logo">
+                    </a>
+                </div>
+                <h2 class="project-title">YouBlog</h2>
+                <div class="project-description">
+                    <p>YouBlog is a simple, lightweight blogging platform designed for ease of use and customization.</p>
+                    <p>Features include:</p>
+                    <ul>
+                        <li>Share Blogs</li>
+                        <li>Custom gif profile picture</li>
+                        <li>Commenting and liking system</li>
+                        <li>Simple and modern website look</li>
+                    </ul>
+                </div>
+                <form action="https://www.paypal.me/MohcineElhala" method="post" target="_blank">
+                    <input type="hidden" name="business" value="your-paypal-email@example.com">
+                    <input type="hidden" name="item_name" value="Donation for YouBlog">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <button type="submit" class="donate-btn">Donate to YouBlog</button>
+                </form>
+            </div>
+            
+            <!-- YouChan Project Page (hidden by default) -->
+            <div id="youchan" class="project-page" style="display: none;">
+                <div class="project-logo-container">
+                    <a href="https://yourdomain.com/youchan" target="_blank">
+                        <img src="logotmp.png" alt="YouChan Logo">
+                    </a>
+                </div>
+                <h2 class="project-title">YouChan</h2>
+                <div class="project-description">
+                    <p>YouChan is an imageboard platform inspired by traditional chan boards but with modern features.</p>
+                    <p>Features include:</p>
+                    <ul>
+                        <li>Anonymous posting</li>
+                        <li>Image and file uploads</li>
+                        <li>Threaded discussions</li>
+                        <li>Custom board creation</li>
+                    </ul>
+                </div>
+                <form action="https://www.paypal.me/MohcineElhala" method="post" target="_blank">
+                    <input type="hidden" name="business" value="your-paypal-email@example.com">
+                    <input type="hidden" name="item_name" value="Donation for YouChan">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <button type="submit" class="donate-btn">Donate to YouChan</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 YouSoft. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Simple navigation between projects
+        document.querySelectorAll('.project-list a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const projectId = this.getAttribute('href').substring(1);
+                
+                // Hide all project pages and default content
+                document.querySelectorAll('.project-page').forEach(page => {
+                    page.style.display = 'none';
+                });
+                document.getElementById('default-content').style.display = 'none';
+                
+                // Show the selected project page
+                document.getElementById(projectId).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
